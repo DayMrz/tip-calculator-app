@@ -4,8 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Tip calculator app</title>
@@ -13,65 +11,67 @@
 </head>
 
 <body>
-  <h1 class="container title">Spli <br> tter</h1>
+  <h1 class="title">Spli <br> tter</h1>
   <div class="container-calculator">
-    <div class="container row">
+    <div class="container">
+
+      <div class="container-form-user">
+        <form action="">
+          <h2 class=" subtitle">Bill</h2>
+          <label class="dollarSign" for="billAmount"></label>
+          <input class="Input-user " id="billAmount" type="number" name="billAmount" placeholder="0.0" required>
 
 
-      <h2 class="subtitle">Bill</h2>
-      <label class="dollarSign" for="billAmount"></label>
-      <input class="Input-user " id="billAmount" type="number" name="billAmount" placeholder="0.0" required>
+          <h2 class="subtitle-tip">Select Tip %</h2>
+          <div class="Wrapper-tip">
+            <div><button type="submit" class="Button-tip" value="5%" onclick="dis('5%')">5%</button>
+            </div>
+            <div><button type="submit" class="Button-tip Button-tip-ml" value="10%">10%</button></div>
+            <div><button type="submit" class="Button-tip" value="15%">15%</button></div>
+            <div><button type="submit" class="Button-tip Button-tip-ml" value="25%">25%</button></div>
+            <div><button type="submit" class="Button-tip" value="50%">50%</button></div>
+            <div><label for="custom"></label>
+              <input class="Input-custom Button-tip-ml" id="custom" name="custom" type="number" placeholder="Custom">
+            </div>
+          </div>
 
-
-      <h2 class="subtitle-tip">Select Tip %</h2>
-      <div class="Wrapper-tip">
-        <div><button type="submit" class="Button-tip" value="5%" onclick="dis('5%')">5%</button>
-        </div>
-        <div><button type="submit" class="Button-tip Button-tip-ml" value="10%">10%</button></div>
-        <div><button type="submit" class="Button-tip" value="15%">15%</button></div>
-        <div><button type="submit" class="Button-tip Button-tip-ml" value="25%">25%</button></div>
-        <div><button type="submit" class="Button-tip" value="50%">50%</button></div>
-        <div><label for="custom"></label>
-          <input class="Input-custom Button-tip-ml" id="custom" name="custom" type="number" placeholder="Custom">
-        </div>
+          <h3 class="subtitle">Number of People</h3>
+          <label class="userIcon" for="numOfPeople"></label>
+          <input class="Input-user" type="number" name="numOfPeople" id="numOfPeople" min="1" required>
       </div>
 
-      <h3 class="subtitle">Number of People</h3>
-      <label class="userIcon" for="numOfPeople"></label>
-      <input class="Input-user" type="number" name="numOfPeople" id="numOfPeople" min="1" required>
-
-      <div class="container-total">
+      <div class="container-form-show">
         <div class="container-row">
           <div class="Content-total">
-            <h4 class="subtitle-tip-total">Tip Amount</h4>
+            <h4 class="Subtitle-total">Tip Amount</h4>
             <p class="P-description">/ person</p>
           </div>
           <div class="show-total">
-            <label for=""></label>
-
+            <span class="span-total-tip">-$</span>
           </div>
         </div>
+
         <div class="container-row">
           <div class="Content-total">
-            <h4 class="subtitle-total">Total</h4>
+            <h4 class="Subtitle-total">Total</h4>
             <p class="P-description">/ person</p>
           </div>
           <div class="show-total">
-            <label for=""></label>
-
+            <span class="span-total">-$</span>
           </div>
-          <button type="reset" class="Button-reset">Reset</button>
         </div>
+        <button type="reset" class="Button-reset">Reset</button>
+        </form>
       </div>
-      </form>
-
     </div>
   </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Day M</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Day M</a>.
+    </div>
+  </footer>
 </body>
 
 </html>
