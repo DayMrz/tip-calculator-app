@@ -13,49 +13,64 @@
 </head>
 
 <body>
-  <h1 class="title"> Splitter</h1>
-  <div class="conteiner-calculator">
+  <h1 class="container title">Spli <br> tter</h1>
+  <div class="container-calculator">
     <div class="container row">
+
+
       <h2 class="subtitle">Bill</h2>
+      <label class="dollarSign" for="billAmount"></label>
+      <input class="Input-user " id="billAmount" type="number" name="billAmount" placeholder="0.0" required>
 
-      < action="">
-        <label for="billAmount"></label>
-        <input class="Input-user dollarsign" id="billAmount" type="number" name="billAmount" placeholder="0.0" required>
 
-        <h2 class="subtitle">Select Tip %</h2>
-        <table>
-          <tr>
-            <td><button class="Button-custom-tip">5%</button></td>
-            <td><button class="Button-custom-tip">15%</button></td>
-            <td><button class="Button-custom-tip">25%</button></td>
-            <td><button class="Button-custom-tip">50%</button></td>
-            <td>
-              <label for="custom"></label>
-              <input class="Button-custom-tip" id="custom" name="custom" type="number" placeholder="Custom">
-            </td>
-          </tr>
-        </table>
-
-        <h3>Number of People</h3>
-
-        <form action="">
-          <label for="numOfPeople"></label>
-          <input class="Input-user Input-user-icon" type="number" name="numOfPeople" required>
-        </form>
-        <div class="conteiner-total">
-          <h4 class="subtitle-tip">Tip Amount</h4>
-          <p class="P-description">/ person</p>
-          <h4 class="subtitle-total">Total</h4>
-          <p class="P-description">/ person</p>
-          <button class="Button-reset">Reset</button>
+      <h2 class="subtitle-tip">Select Tip %</h2>
+      <div class="Wrapper-tip">
+        <div><button type="submit" class="Button-tip" value="5%" onclick="dis('5%')">5%</button>
         </div>
+        <div><button type="submit" class="Button-tip Button-tip-ml" value="10%">10%</button></div>
+        <div><button type="submit" class="Button-tip" value="15%">15%</button></div>
+        <div><button type="submit" class="Button-tip Button-tip-ml" value="25%">25%</button></div>
+        <div><button type="submit" class="Button-tip" value="50%">50%</button></div>
+        <div><label for="custom"></label>
+          <input class="Input-custom Button-tip-ml" id="custom" name="custom" type="number" placeholder="Custom">
+        </div>
+      </div>
+
+      <h3 class="subtitle">Number of People</h3>
+      <label class="userIcon" for="numOfPeople"></label>
+      <input class="Input-user" type="number" name="numOfPeople" id="numOfPeople" min="1" required>
+
+      <div class="container-total">
+        <div class="container-row">
+          <div class="Content-total">
+            <h4 class="subtitle-tip-total">Tip Amount</h4>
+            <p class="P-description">/ person</p>
+          </div>
+          <div class="show-total">
+            <label for=""></label>
+
+          </div>
+        </div>
+        <div class="container-row">
+          <div class="Content-total">
+            <h4 class="subtitle-total">Total</h4>
+            <p class="P-description">/ person</p>
+          </div>
+          <div class="show-total">
+            <label for=""></label>
+
+          </div>
+          <button type="reset" class="Button-reset">Reset</button>
+        </div>
+      </div>
+      </form>
 
     </div>
   </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Day M</a>.
   </div>
 </body>
 
