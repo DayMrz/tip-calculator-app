@@ -15,38 +15,64 @@
   <div class="container-calculator">
     <div class="container">
 
-      <div class="container-form-user">
+      <section class="Section-form-user">
         <form action="">
           <div class="block-1">
             <h2 class=" subtitle">Bill</h2>
             <label class="dollarSign" for="billAmount"></label>
-            <input class="Input-user " id="billAmount" type="number" name="billAmount" placeholder="0.0" required>
+
+            <input class="Input-user " id="billAmount" type="text" pattern="[0-9]+\.?[0-9]+" name="billAmount"
+              placeholder="0.0" step="0.01" required inputmode="decimal">
           </div>
 
           <div class="block-2">
             <h2 class="subtitle-tip">Select Tip %</h2>
             <div class="Wrapper-tip">
-              <div><button type="submit" class="Button-tip grid-1" value="5%" onclick="dis('5%')">5%</button>
+              <label class="Btn-tip">
+                <span>5%</span>
+                <input type="radio" value="5" name="tip" />
+              </label>
+              <label class="Btn-tip">
+                <span>10%</span>
+                <input type="radio" value="10" name="tip" />
+              </label>
+              <label class="Btn-tip">
+                <span>15%</span>
+                <input type="radio" value="15" name="tip" />
+              </label>
+              <label class="Btn-tip">
+                <span>20%</span>
+                <input type="radio" value="20" name="tip">
+              </label>
+              <label class="Btn-tip">
+                <span>25%</span>
+                <input type="radio" value="25" name="tip">
+              </label>
+              <label class="Btn-tip">
+                <span>50%</span>
+                <input type="radio" value="50" name="tip">
+              </label>
+              <div><button type="submit" class="Btn-tip grid-1" value="0.05">5%</button>
               </div>
-              <div><button type="submit" class="Button-tip grid-2 " value="10%">10%</button>
+              <div><button type="submit" class="Btn-tip grid-2 " value="0.1">10%</button>
               </div>
-              <div><button type="submit" class="Button-tip grid-3" value="15%">15%</button></div>
-              <div><button type="submit" class="Button-tip grid-4" value="25%">25%</button></div>
-              <div><button type="submit" class="Button-tip grid-5" value="50%">50%</button></div>
-              <div><label for="custom"></label>
-                <input class="Input-custom grid-6" id="custom" name="custom" type="number" placeholder="Custom">
-              </div>
+              <div><button type="submit" class="Btn-tip grid-3" value="0.15">15%</button></div>
+              <div><button type="submit" class="Btn-tip grid-4" value="0.25">25%</button></div>
+              <div><button type="submit" class="Btn-tip grid-5" value="0.5">50%</button></div>
+              <label>
+                <input class="Input-custom grid-6" name="custom" type="number" placeholder="Custom">
+              </label>
             </div>
           </div>
 
-          <div class="block-3">
+          <div class="Block-3">
             <h3 class="subtitle">Number of People</h3>
-            <label class="userIcon" for="numOfPeople"></label>
-            <input class="Input-user" type="number" name="numOfPeople" id="numOfPeople" min="1" required>
+            <label class="userIcon" for="amountPeople"></label>
+            <input class="Input-user" type="number" id="amountPeople" name="amountPeople" min="1" required>
           </div>
-      </div>
+      </section>
 
-      <div class="container-form-show">
+      <section class="Section-form-show">
         <div class="display-show">
           <div class="row-show">
             <div class="content-description">
@@ -68,9 +94,9 @@
           </div>
         </div>
 
-        <button type="reset" class="Button-reset">Reset</button>
+        <button type="reset" class="Btn-reset">Reset</button>
         </form>
-      </div>
+      </section>
     </div>
   </div>
 
@@ -80,6 +106,8 @@
       Coded by <a href="#">Day M</a>.
     </div>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
