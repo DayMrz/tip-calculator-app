@@ -17,49 +17,57 @@
 
       <div class="container-form-user">
         <form action="">
-          <h2 class=" subtitle">Bill</h2>
-          <label class="dollarSign" for="billAmount"></label>
-          <input class="Input-user " id="billAmount" type="number" name="billAmount" placeholder="0.0" required>
+          <div class="block-1">
+            <h2 class=" subtitle">Bill</h2>
+            <label class="dollarSign" for="billAmount"></label>
+            <input class="Input-user " id="billAmount" type="number" name="billAmount" placeholder="0.0" required>
+          </div>
 
-
-          <h2 class="subtitle-tip">Select Tip %</h2>
-          <div class="Wrapper-tip">
-            <div><button type="submit" class="Button-tip" value="5%" onclick="dis('5%')">5%</button>
-            </div>
-            <div><button type="submit" class="Button-tip Button-tip-ml" value="10%">10%</button></div>
-            <div><button type="submit" class="Button-tip" value="15%">15%</button></div>
-            <div><button type="submit" class="Button-tip Button-tip-ml" value="25%">25%</button></div>
-            <div><button type="submit" class="Button-tip" value="50%">50%</button></div>
-            <div><label for="custom"></label>
-              <input class="Input-custom Button-tip-ml" id="custom" name="custom" type="number" placeholder="Custom">
+          <div class="block-2">
+            <h2 class="subtitle-tip">Select Tip %</h2>
+            <div class="Wrapper-tip">
+              <div><button type="submit" class="Button-tip grid-1" value="5%" onclick="dis('5%')">5%</button>
+              </div>
+              <div><button type="submit" class="Button-tip grid-2 " value="10%">10%</button>
+              </div>
+              <div><button type="submit" class="Button-tip grid-3" value="15%">15%</button></div>
+              <div><button type="submit" class="Button-tip grid-4" value="25%">25%</button></div>
+              <div><button type="submit" class="Button-tip grid-5" value="50%">50%</button></div>
+              <div><label for="custom"></label>
+                <input class="Input-custom grid-6" id="custom" name="custom" type="number" placeholder="Custom">
+              </div>
             </div>
           </div>
 
-          <h3 class="subtitle">Number of People</h3>
-          <label class="userIcon" for="numOfPeople"></label>
-          <input class="Input-user" type="number" name="numOfPeople" id="numOfPeople" min="1" required>
+          <div class="block-3">
+            <h3 class="subtitle">Number of People</h3>
+            <label class="userIcon" for="numOfPeople"></label>
+            <input class="Input-user" type="number" name="numOfPeople" id="numOfPeople" min="1" required>
+          </div>
       </div>
 
       <div class="container-form-show">
-        <div class="container-row">
-          <div class="Content-total">
-            <h4 class="Subtitle-total">Tip Amount</h4>
-            <p class="P-description">/ person</p>
+        <div class="display-show">
+          <div class="row-show">
+            <div class="content-description">
+              <h4 class="Subtitle-total">Tip Amount</h4>
+              <p class="P-description">/ person</p>
+            </div>
+            <div class="show-total">
+              <span class="span-total-tip">$ 0.00</span>
+            </div>
           </div>
-          <div class="show-total">
-            <span class="span-total-tip">-$</span>
+          <div class="row-show">
+            <div class="content-description">
+              <h4 class="Subtitle-total">Total</h4>
+              <p class="P-description">/ person</p>
+            </div>
+            <div class="show-total">
+              <span class="span-total">$ 0.00</span>
+            </div>
           </div>
         </div>
 
-        <div class="container-row">
-          <div class="Content-total">
-            <h4 class="Subtitle-total">Total</h4>
-            <p class="P-description">/ person</p>
-          </div>
-          <div class="show-total">
-            <span class="span-total">-$</span>
-          </div>
-        </div>
         <button type="reset" class="Button-reset">Reset</button>
         </form>
       </div>
