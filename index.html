@@ -11,85 +11,77 @@
 </head>
 
 <body>
-  <h1 class="title">Spli <br> tter</h1>
-  <div class="container-calculator">
-    <div class="container">
+  <h1 class="Title">Spli <br> tter</h1>
+  <div class="Container-calculator">
+    <div class="Container">
 
       <section class="Section-form-user">
-        <form action="">
-          <div class="block-1">
-            <h2 class=" subtitle">Bill</h2>
-            <label class="dollarSign" for="billAmount"></label>
+        <form class="Form" action="#" autocomplete="off">
+          <div class="Block-1">
+            <h2 class=" Subtitle">Bill</h2>
+            <label class="DollarSign" for="billAmount"></label>
 
             <input class="Input-user " id="billAmount" type="text" pattern="[0-9]+\.?[0-9]+" name="billAmount"
               placeholder="0.0" step="0.01" required inputmode="decimal">
           </div>
 
-          <div class="block-2">
-            <h2 class="subtitle-tip">Select Tip %</h2>
+          <div class="Block-2">
+            <h2 class="Subtitle-tip">Select Tip %</h2>
             <div class="Wrapper-tip">
-              <label class="Btn-tip">
+              <label class="Btn-tip Grid-1">
                 <span>5%</span>
-                <input type="radio" value="5" name="tip" />
+                <input class="Input-radio" type="radio" value="5" name="tip" />
               </label>
-              <label class="Btn-tip">
+              <label class="Btn-tip Grid-2">
                 <span>10%</span>
-                <input type="radio" value="10" name="tip" />
+                <input class="Input-radio" type="radio" value="10" name="tip" />
               </label>
-              <label class="Btn-tip">
+              <label class="Btn-tip Grid-3">
                 <span>15%</span>
-                <input type="radio" value="15" name="tip" />
+                <input class="Input-radio grid-3" type="radio" value="15" name="tip" />
               </label>
-              <label class="Btn-tip">
-                <span>20%</span>
-                <input type="radio" value="20" name="tip">
-              </label>
-              <label class="Btn-tip">
+              <label class="Btn-tip Grid-4">
                 <span>25%</span>
-                <input type="radio" value="25" name="tip">
+                <input class="Input-radio" type="radio" value="25" name="tip">
               </label>
-              <label class="Btn-tip">
+              <label class="Btn-tip Grid-5">
                 <span>50%</span>
-                <input type="radio" value="50" name="tip">
+                <input class="Input-radio" type="radio" value="50" name="tip">
               </label>
-              <div><button type="submit" class="Btn-tip grid-1" value="0.05">5%</button>
-              </div>
-              <div><button type="submit" class="Btn-tip grid-2 " value="0.1">10%</button>
-              </div>
-              <div><button type="submit" class="Btn-tip grid-3" value="0.15">15%</button></div>
-              <div><button type="submit" class="Btn-tip grid-4" value="0.25">25%</button></div>
-              <div><button type="submit" class="Btn-tip grid-5" value="0.5">50%</button></div>
               <label>
-                <input class="Input-custom grid-6" name="custom" type="number" placeholder="Custom">
+                <input class="Input-custom Grid-6" name="custom" type="text" placeholder="Custom" step="0.01"
+                  inputmode="decimal">
               </label>
             </div>
           </div>
 
           <div class="Block-3">
-            <h3 class="subtitle">Number of People</h3>
-            <label class="userIcon" for="amountPeople"></label>
-            <input class="Input-user" type="number" id="amountPeople" name="amountPeople" min="1" required>
+            <h3 class="Subtitle">Number of People</h3>
+            <label class="UserIcon" for="amountPeople">
+              <input class="Input-user" type="text" id="amountPeople" inputmode="decimal" pattern="[0-9]+"
+                name="amountPeople" min="1" required>
+            </label>
           </div>
       </section>
 
       <section class="Section-form-show">
-        <div class="display-show">
-          <div class="row-show">
-            <div class="content-description">
+        <div class="Display-show">
+          <div class="Row-show">
+            <div class="Content-description">
               <h4 class="Subtitle-total">Tip Amount</h4>
               <p class="P-description">/ person</p>
             </div>
-            <div class="show-total">
-              <span class="span-total-tip">$ 0.00</span>
+            <div class="Show-total">
+              <span class="Span-total-tip">$ 0.00</span>
             </div>
           </div>
-          <div class="row-show">
-            <div class="content-description">
+          <div class="Row-show">
+            <div class="Content-description">
               <h4 class="Subtitle-total">Total</h4>
               <p class="P-description">/ person</p>
             </div>
-            <div class="show-total">
-              <span class="span-total">$ 0.00</span>
+            <div class="Show-total">
+              <span class="Span-total">$ 0.00</span>
             </div>
           </div>
         </div>
