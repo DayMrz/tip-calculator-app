@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --Primary-strong-cyan: hsl(172, 67%, 45%);
-  --Neutral-Very-dark-cyan: hsl(183, 100%, 15%);
-  --Neutral-Dark-grayish-cyan: hsl(186, 14%, 43%);
-  --Neutral-Dark-grayish-cyanS: hsl(184, 14%, 56%);
-  --Neutral-Light-grayish-cyan: hsl(185, 41%, 84%);
-  --Neutral-Light-grayish-cyanS: hsl(189, 41%, 97%);
+  --Neutral-Dark-Grayish-CyanS: hsl(184, 14%, 56%);
+  --Neutral-Dark-Grayish-Cyan: hsl(186, 14%, 43%);
+  --Neutral-Very-Dark-Cyan: hsl(183, 100%, 15%);
+  --Primary-Strong-Cyan: hsl(172, 67%, 45%);
+  --Hover-Cyan : 	hsl(173, 61%, 77%);
+  --Neutral-Light-Grayish-Cyan: hsl(185, 41%, 84%);
+  --Neutral-Light-Grayish-CyanS: hsl(189, 41%, 97%);
   --Neutral-White: hsl(0, 0%, 100%);
-  --hover-cyan : 	hsl(173, 61%, 77%);
+
+  --Alert-Red: 	hsl(0, 100%, 60%)
 }
 
 *, *::before, ::after {
@@ -17,7 +19,7 @@
 
 body {
   align-items: center;
-  background-color: var(--Neutral-Light-grayish-cyan);
+  background-color: var(--Neutral-Light-Grayish-Cyan);
   display: flex;
   flex-direction: column;
   font-family:'Space Mono', monospace;
@@ -38,7 +40,7 @@ body {
 }
 
 .Section-form-show {
-  background-color: var(--Neutral-Very-dark-cyan);
+  background-color: var(--Neutral-Very-Dark-Cyan);
   border-radius: 10px;
   margin-top: 2rem;
   padding: 1.5rem;
@@ -55,14 +57,14 @@ body {
 
 
 .Title {
-  color: var(--Neutral-Very-dark-cyan);
+  color: var(--Neutral-Very-Dark-Cyan);
   letter-spacing: 10px;
   text-transform: uppercase;
 }
 
 .Subtitle,
 .Subtitle-tip {
-  color: var(--Neutral-Dark-grayish-cyan);
+  color: var(--Neutral-Dark-Grayish-Cyan);
   font-size: 13px;
 }
 
@@ -79,8 +81,16 @@ body {
   padding: .8rem;
 }
 
+.Alert {
+  color: var(--Alert-Red);
+  margin: 0;
+  text-align: right;
+  font-size: 10px;
+  font-family:'Space Mono', monospace;
+}
+
 ::placeholder {
-  color: var(--Neutral-Dark-grayish-cyanS);
+  color: var(--Neutral-Dark-Grayish-CyanS);
 }
 
 .DollarSign {
@@ -98,18 +108,16 @@ body {
 }
 
 .Input-user {
-  background-color: var(--Neutral-Light-grayish-cyanS);
-  color: var(--Neutral-Very-dark-cyan);
+  background-color: var(--Neutral-Light-Grayish-CyanS);
+  color: var(--Neutral-Very-Dark-Cyan);
   text-align: right;
   width: 100%;
 }
 
-
-
 .Input-custom {
-  background-color: var(--Neutral-Light-grayish-cyanS);
+  background-color: var(--Neutral-Light-Grayish-CyanS);
   border: 0;
-  color: var(--Neutral-Very-dark-cyan);
+  color: var(--Neutral-Very-Dark);
   text-align: right;
 }
 
@@ -129,7 +137,7 @@ body {
 }
 
 .Btn-tip {
-  background-color: var(--Neutral-Very-dark-cyan);
+  background-color: var(--Neutral-Very-Dark-Cyan);
   color: var(--Neutral-White);
   font-family:'Space Mono', monospace;
   text-align: center;
@@ -168,7 +176,7 @@ body {
 }
 
 .P-description {
-  color: var(--Neutral-Dark-grayish-cyanS);
+  color: var(--Neutral-Dark-Grayish-CyanS);
   margin-top: 0;
 }
 
@@ -176,13 +184,13 @@ body {
 .Span-total {
   font-size: 24px;
   font-weight: 700;
-  color: var(--Primary-strong-cyan);
+  color: var(--Primary-Strong-Cyan);
 }
 
 .Btn-reset {
-  background-color: var(--Primary-strong-cyan);
+  background-color: var(--Primary-Strong-Cyan);
   border: 0;
-  color: var(--Neutral-Very-dark-cyan);
+  color: var(--Neutral-Very-Dark-Cyan);
   padding: .8rem;
   text-transform: uppercase;
   width: 282px;
@@ -192,16 +200,16 @@ body {
 .Input-user:hover,
 .Input-custom:focus, 
 .Input-custom:hover {
-  border: solid var(--Primary-strong-cyan);
-  outline:  var(--Primary-strong-cyan);
+  border: solid var(--Primary-Strong-Cyan);
+  outline:  var(--Primary-Strong-Cyan);
 }
 
 .Btn-tip:focus,
 .Btn-tip:hover,
 .Btn-reset:focus,
 .Btn-reset:hover {
-  background-color: var(--hover-cyan);
-  color: var(--Neutral-Very-dark-cyan);
+  background-color: var(--Hover-Cyan);
+  color: var(--Neutral-Very-Dark-Cyan);
 }
 
 

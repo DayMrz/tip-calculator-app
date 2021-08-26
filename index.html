@@ -12,85 +12,94 @@
 
 <body>
   <h1 class="Title">Spli <br> tter</h1>
-  <div class="Container-calculator">
-    <div class="Container">
 
-      <section class="Section-form-user">
-        <form class="Form" action="#" autocomplete="off">
-          <div class="Block-1">
-            <h2 class=" Subtitle">Bill</h2>
-            <label class="DollarSign" for="billAmount"></label>
+  <head id="Head">
 
-            <input class="Input-user " id="billAmount" type="text" pattern="[0-9]+\.?[0-9]+" name="billAmount"
-              placeholder="0.0" step="0.01" required inputmode="decimal">
-          </div>
+    <div class="Container-calculator">
+      <div class="Container">
 
-          <div class="Block-2">
-            <h2 class="Subtitle-tip">Select Tip %</h2>
-            <div class="Wrapper-tip">
-              <label class="Btn-tip Grid-1">
-                <span>5%</span>
-                <input class="Input-radio" type="radio" value="5" name="tip" />
+        <section class="Section-form-user">
+          <form id="Form" action="" autocomplete="off">
+            <div class="Block-1">
+              <h2 class=" Subtitle">Bill</h2>
+              <label class="DollarSign" for="billAmount">
               </label>
-              <label class="Btn-tip Grid-2">
-                <span>10%</span>
-                <input class="Input-radio" type="radio" value="10" name="tip" />
+
+              <input class="Input-user Filled" id="billAmount" type="text" pattern="[0-9]+\.?[0-9]+" name="billAmount"
+                placeholder="0.0" required inputmode="decimal">
+            </div>
+
+            <div class="Block-2">
+              <h2 class="Subtitle-tip">Select Tip %</h2>
+              <div class="Wrapper-tip">
+                <label class="Bt Btn-tip Grid-1">
+                  <span>5%</span>
+                  <input class="Input-radio" type="radio" value="5" name="tip">
+                </label>
+                <label class="Bt Btn-tip Grid-2">
+                  <span>10%</span>
+                  <input class="Input-radio" type="radio" value="10" name="tip" />
+                </label>
+                <label class="Bt Btn-tip Grid-3">
+                  <span>15%</span>
+                  <input class="Input-radio grid-3" type="radio" value="15" name="tip" />
+                </label>
+                <label class="Bt Btn-tip Grid-4">
+                  <span>25%</span>
+                  <input class="Input-radio" type="radio" value="25" name="tip">
+                </label>
+                <label class="Bt Btn-tip Grid-5">
+                  <span>50%</span>
+                  <input class="Input-radio" type="radio" value="50" name="tip">
+                </label>
+                <label>
+                  <input class="Bt Input-custom Grid-6" name="CustomTip" type="text" placeholder="Custom"
+                    inputmode="decimal">
+                </label>
+              </div>
+            </div>
+
+            <div class="Block-3">
+              <h3 class="Subtitle">Number of People</h3>
+              <p class="Alert"></p>
+              <label class="UserIcon" for="amountPeople">
+                <span class="Cant-zero"></span>
+                <input class="Input-user Filled" type="text" id="amountPeople" inputmode="decimal" pattern="[0-9]+"
+                  name="amountPeople" min="1" required>
               </label>
-              <label class="Btn-tip Grid-3">
-                <span>15%</span>
-                <input class="Input-radio grid-3" type="radio" value="15" name="tip" />
-              </label>
-              <label class="Btn-tip Grid-4">
-                <span>25%</span>
-                <input class="Input-radio" type="radio" value="25" name="tip">
-              </label>
-              <label class="Btn-tip Grid-5">
-                <span>50%</span>
-                <input class="Input-radio" type="radio" value="50" name="tip">
-              </label>
-              <label>
-                <input class="Input-custom Grid-6" name="custom" type="text" placeholder="Custom" step="0.01"
-                  inputmode="decimal">
-              </label>
+            </div>
+
+            <button type="submit"></button>
+        </section>
+
+        <section class="Section-form-show">
+          <div class="Display-show">
+            <div class="Row-show">
+              <div class="Content-description">
+                <h4 class="Subtitle-total">Tip Amount</h4>
+                <p class="P-description">/ person</p>
+              </div>
+              <div class="Show-total">
+                <span class="Span-total-tip">$ 0.00</span>
+              </div>
+            </div>
+            <div class="Row-show">
+              <div class="Content-description">
+                <h4 class="Subtitle-total">Total</h4>
+                <p class="P-description">/ person</p>
+              </div>
+              <div class="Show-total">
+                <span class="Span-total">$ 0.00</span>
+              </div>
             </div>
           </div>
 
-          <div class="Block-3">
-            <h3 class="Subtitle">Number of People</h3>
-            <label class="UserIcon" for="amountPeople">
-              <input class="Input-user" type="text" id="amountPeople" inputmode="decimal" pattern="[0-9]+"
-                name="amountPeople" min="1" required>
-            </label>
-          </div>
-      </section>
-
-      <section class="Section-form-show">
-        <div class="Display-show">
-          <div class="Row-show">
-            <div class="Content-description">
-              <h4 class="Subtitle-total">Tip Amount</h4>
-              <p class="P-description">/ person</p>
-            </div>
-            <div class="Show-total">
-              <span class="Span-total-tip">$ 0.00</span>
-            </div>
-          </div>
-          <div class="Row-show">
-            <div class="Content-description">
-              <h4 class="Subtitle-total">Total</h4>
-              <p class="P-description">/ person</p>
-            </div>
-            <div class="Show-total">
-              <span class="Span-total">$ 0.00</span>
-            </div>
-          </div>
-        </div>
-
-        <button type="reset" class="Btn-reset">Reset</button>
-        </form>
-      </section>
+          <button type="reset" class="Btn-reset">Reset</button>
+          </form>
+        </section>
+      </div>
     </div>
-  </div>
+  </head>
 
   <footer>
     <div class="attribution">
