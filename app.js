@@ -2,8 +2,8 @@ const form = document.querySelector('#Form');
 
 const tipPercent = document.querySelectorAll('input[name="tip"]');
 const btnTip = document.querySelectorAll('.Btn-tip');
-const labels = document.querySelectorAll('.Bt')
-const btnCustom = document.querySelector('.Input-custom')
+const btnCustom = document.querySelector('.Input-custom');
+const amountPeople = document.querySelector('#amountPeople')
 
 
 for (let i = 0; i < tipPercent.length; i++) {
@@ -20,19 +20,13 @@ for (let i = 0; i < tipPercent.length; i++) {
     }
 }
 
-btnCustom.onclick = () => {
-    for (let i = 0; i < labels.length; i++);
-    labels[i].style.color = 'red';
-    labels[i].style.backgroundColor = 'orange'
-}
 
-
-
-
-
-function validateInput(value) {
-    if (value === "" || value === 0) {
-        return false;
+function validateInput() {
+    if (amountPeople.value === "" || amountPeople.value === 0) {
+        const alert = document.querySelector('.Alert');
+        alert.style.visibility = 'visible';
+    } else {
+        alert.style.visibility = 'hidden'
     }
 }
 

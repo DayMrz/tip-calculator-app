@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family:'Space Mono', monospace;
-  font-size: 16px;
+  font-size: 1.2em;
   height: 100vh;
   justify-content: space-between;
   margin: 0 auto;
@@ -49,12 +49,9 @@ body {
   justify-content: space-between;
 }
 
-.Block-1, 
-.Block-2, 
-.Block-3 {
-  margin-bottom: 2rem;
+.Block-1 {
+  margin-bottom: 1.5rem;
 }
-
 
 .Title {
   color: var(--Neutral-Very-Dark-Cyan);
@@ -65,28 +62,34 @@ body {
 .Subtitle,
 .Subtitle-tip {
   color: var(--Neutral-Dark-Grayish-Cyan);
-  font-size: 13px;
+  font-size: .8em;
+}
+
+.Subtitle {
+  margin-bottom: 0;
 }
 
 .Input-user,
 .Btn-tip,
 .Input-custom,
 .Btn-reset {
-  font-size: 18px;
+  font-size: 1.2em;
   font-family:'Space Mono', monospace;
   font-weight: 700;
   border: 0;
   border-radius: 5px;
   cursor: pointer;
-  padding: .8rem;
+  padding: .5rem;
+  color: var(--Neutral-Very-Dark-Cyan);
 }
 
 .Alert {
   color: var(--Alert-Red);
+  font-family:'Space Mono', monospace;
+  font-size: .8em;
   margin: 0;
   text-align: right;
-  font-size: 10px;
-  font-family:'Space Mono', monospace;
+  visibility: hidden;
 }
 
 ::placeholder {
@@ -124,6 +127,7 @@ body {
 .Wrapper-tip {
   display: grid;
   grid-template-columns: repeat( 2, 2fr);
+  justify-items: end;
 }
 
 .Input-radio {
@@ -178,11 +182,12 @@ body {
 .P-description {
   color: var(--Neutral-Dark-Grayish-CyanS);
   margin-top: 0;
+  font-size: .8em;
 }
 
 .Span-total-tip,
 .Span-total {
-  font-size: 24px;
+  font-size: 1.2em;
   font-weight: 700;
   color: var(--Primary-Strong-Cyan);
 }
@@ -213,8 +218,15 @@ body {
 }
 
 
+.Btn-tip:active,
+.Input-custom:active,
+.Input-user:active,
+.Input-custom:active {
+  transform: scale(.97);
+}
+
 .attribution {
-    font-size: 11px;
+    font-size: .5em;
     text-align: center;
   }
 
@@ -259,7 +271,7 @@ body {
     }
 
     .Title {
-      font-size: 22px;
+      font-size: 1em;
     }
 
     .Wrapper-tip {
