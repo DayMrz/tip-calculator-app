@@ -1,83 +1,52 @@
-const form = document.querySelector('#Form');
+const $form = document.querySelector('#Form')
 
-const tipPercent = document.querySelectorAll('input[name="tip"]');
-const btnTip = document.querySelectorAll('.Btn-tip');
-const btnCustom = document.querySelector('.Input-custom');
-const amountPeople = document.querySelector('#amountPeople')
+const $people = document.querySelector('#Amount-people')
+const $customTip = document.querySelector('.Input-custom')
 
+const $tipPerPerson = document.querySelector('#tipPerPerson')
+const $totalPerPerson = document.querySelector('#totalPerPerson')
 
-for (let i = 0; i < tipPercent.length; i++) {
-    const tipLabel = tipPercent[i].closest('label');
-    tipPercent[i].onclick = () => {
-        for (let i = 0; i < btnTip.length; i++) {
-            btnTip[i].style.color = 'hsl(0, 0%, 100%)';
-            btnTip[i].style.backgroundColor = 'hsl(183, 100%, 15%)';
-        }
-        btnCustom.value = null;
-        tipLabel.style.color = "hsl(0, 0%, 100%)";
-        tipLabel.style.backgroundColor = "hsl(173, 61%, 77%)";
-        // calculate();
-    }
+const tipSelector = 'input[name="tip"]'
+
+const $tipInputs = document.querySelectorAll(tipSelector)
+
+const alert = document.querySelector('#Alert')
+
+function calculateTip() {
+  const amount = parseFloat($amount.value || 0)
+  const people = parseInt($people.value || 1, 10)
+
+  const $tip = document.querySelector(`${tipSelector}:checked`)
+
+  const tip = $tip ? parseInt($tip.value, 10) : $customTip.value
+
+  const tipPerPerson = (amount * (tip / 100)) / people
+
+  const totalPerPerson = (amount / people) + tipPerPerson
+
+  showTotal(totalPerPerson, tipPerPerson)
 }
 
-
-function validateInput() {
-    if (amountPeople.value === "" || amountPeople.value === 0) {
-        const alert = document.querySelector('.Alert');
-        alert.style.visibility = 'visible';
-    } else {
-        alert.style.visibility = 'hidden'
-    }
+function showTotal(totalPerPerson, tipPerPerson) {
+  $totalPerPerson.textContent = `$ ${totalPerPerson.toFixed(2)}`
+  $tipPerPerson.textContent = `$ ${tipPerPerson.toFixed(2)}`
 }
 
+function resetTip() {
+  showTotal(0, 0)
+}
 
+function handleCustomTip() {
+  $tipInputs.forEach(input => {
+    input.checked = false
+  })
+}
 
+$form.addEventListener('input', calculateTip)
 
-// if (inputsFilled.value.length == 0 || inputsFilled.value == NaN) {
-//     document.getElementById('Head').innerText = "*Can't be zero"
-//     inputsFilled.focus();
-//     return false
+$form.addEventListener('reset', resetTip)
 
-
-
-// function tipCalculation() {
-
-// }
-
-// textAlert.appendChild(document.createTextNode("*Can't be zero or empty "))
-
-// btnTip.addEventListener("click", function () {
-//     alert("What!?!?!?!")
-
-// })
-
-
-// const tip = new Tip();
-// tipPercent['5'] = 5;
-// tipPercent['10'] = 10;
-// tipPercent['15'] = 15;
-// tipPercent['25'] = 25;
-// tipPercent['50'] = 50;
-
-
-
-// function validateForm() {
-//     const valid = document.forms["#form"]["billAmount"]["customTip"]["amountPeople"].value;
-//     if (valid == "") {
-//         alert("name must be filled out");
-//         return false;
-//     }
-// }
-
-
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-
-//     if (bill)
-//         const billAmount = form.elements.billAmount;
-
-
-//     console.log(billAmount.value)
-// })
-
+$customTip.addEventListener('focus', handleCustomTip)
+$customTip.addEventListener('input', () => {
+  handleCustomTip()
+})

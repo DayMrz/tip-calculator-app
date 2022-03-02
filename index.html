@@ -23,50 +23,73 @@
             <label class="DollarSign" for="billAmount">
             </label>
 
-            <input class="Input-user" id="billAmount" type="text" pattern="[0-9]+\.?[0-9]+" name="billAmount"
-              placeholder="0.0" required inputmode="decimal">
+            <input
+              class="Input-user"
+              id="$amount"
+              inputmode="decimal"
+              name="billAmount"
+              pattern="[0-9]+\.?[0-9]+"
+              placeholder="0.0"
+              required
+              type="number"
+            />
+
           </div>
 
           <div class="Block-2">
             <h2 class="Subtitle-tip">Select Tip %</h2>
             <div class="Wrapper-tip">
-              <label class="Bt Btn-tip Grid-1">
+
+              <input class="Input-radio" type="radio" value="5" name="tip" id="tip-5" checked />
+              <label class="Bt Btn-tip Grid-1" for="tip-5">
                 <span>5%</span>
-                <input class="Input-radio" type="radio" value="5" name="tip">
               </label>
-              <label class="Bt Btn-tip Grid-2">
+
+              <input class="Input-radio" type="radio" value="10" name="tip" id="tip-10" />
+              <label class="Bt Btn-tip Grid-2" for="tip-10">
                 <span>10%</span>
-                <input class="Input-radio" type="radio" value="10" name="tip" />
               </label>
-              <label class="Bt Btn-tip Grid-3">
+
+              <input class="Input-radio grid-3" type="radio" value="15" name="tip" id="tip-15" />
+              <label class="Bt Btn-tip Grid-3" for="tip-15">
                 <span>15%</span>
-                <input class="Input-radio grid-3" type="radio" value="15" name="tip" />
               </label>
-              <label class="Bt Btn-tip Grid-4">
+
+              <input class="Input-radio" type="radio" value="25" name="tip" id="tip-25" />
+              <label class="Bt Btn-tip Grid-4" for="tip-25">
                 <span>25%</span>
-                <input class="Input-radio" type="radio" value="25" name="tip">
               </label>
-              <label class="Bt Btn-tip Grid-5">
+
+              <input class="Input-radio" type="radio" value="50" name="tip" id="tip-50" />
+              <label class="Bt Btn-tip Grid-5" for="tip-50">
                 <span>50%</span>
-                <input class="Input-radio" type="radio" value="50" name="tip">
               </label>
               <label>
-                <input class="Bt Input-custom Grid-6" name="CustomTip" type="text" placeholder="Custom"
-                  inputmode="decimal">
+                <input class="Bt Input-custom Grid-6" name="CustomTip" type="text" placeholder="Custom" data-tip-custom inputmode="decimal" />
               </label>
             </div>
           </div>
 
           <div class="Block-3">
             <h3 class="Subtitle">Number of People</h3>
-            <p class="Alert">Can't be zero!</p>
+            <!-- <p class="Alert-visible Alert-hidden">Can't be zero!</p> -->
+            <p id="Alert" class="Alert-hidden">Can't be zero!</p>
             <label class="UserIcon" for="amountPeople">
-              <span class="Cant-zero"></span>
-              <input class="Input-user" type="text" id="amountPeople" inputmode="decimal" pattern="[0-9]+"
-                name="amountPeople" min="1" required>
+              <input
+                class="Input-user"
+                type="number"
+                id="Amount-people"
+                inputmode="decimal"
+                pattern="[0-9]+"
+                name="amountPeople"
+                min="1"
+                required
+                value="1"
+              />
             </label>
           </div>
       </section>
+      
 
       <section class="Section-form-show">
         <div class="Display-show">
@@ -76,7 +99,7 @@
               <p class="P-description">/ person</p>
             </div>
             <div class="Show-total">
-              <span class="Span-total-tip">$ 0.00</span>
+              <span id="tipPerPerson" class="Span-total-tip">$ 0.00</span>
             </div>
           </div>
           <div class="Row-show">
@@ -85,7 +108,7 @@
               <p class="P-description">/ person</p>
             </div>
             <div class="Show-total">
-              <span class="Span-total">$ 0.00</span>
+              <span id="totalPerPerson" class="Span-total">$ 0.00</span>
             </div>
           </div>
         </div>

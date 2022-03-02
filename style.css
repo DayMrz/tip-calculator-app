@@ -83,13 +83,18 @@ body {
   color: var(--Neutral-Very-Dark-Cyan);
 }
 
-.Alert {
+.Alert-visible {
   color: var(--Alert-Red);
   font-family:'Space Mono', monospace;
   font-size: .8em;
   margin: 0;
   text-align: right;
+  visibility: visible;
+}
+
+.Alert-hidden {
   visibility: hidden;
+  margin: 0;
 }
 
 ::placeholder {
@@ -132,6 +137,10 @@ body {
 
 .Input-radio {
   display: none;
+}
+
+.Input-radio:checked + .Btn-tip {
+  background-color: var(--Primary-Strong-Cyan);
 }
 
 .Btn-tip,
