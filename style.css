@@ -14,6 +14,7 @@
 }
 
 *, *::before, ::after {
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -23,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family:'Space Mono', monospace;
-  font-size: 1.2em;
+  font-size: 1em;
   height: 100vh;
   justify-content: space-between;
   margin: 0 auto;
@@ -53,6 +54,12 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.Container-title {
+  width: 100%;
+  flex-direction: row;
+  padding: 2em;
+}
+
 .Title {
   color: var(--Neutral-Very-Dark-Cyan);
   letter-spacing: 10px;
@@ -63,10 +70,7 @@ body {
 .Subtitle-tip {
   color: var(--Neutral-Dark-Grayish-Cyan);
   font-size: .8em;
-}
-
-.Subtitle {
-  margin-bottom: 0;
+  padding-bottom: 1em;
 }
 
 .Input-user,
@@ -180,6 +184,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 2em;
 }
 
 .Subtitle-total {
@@ -196,9 +201,8 @@ body {
 
 .Span-total-tip,
 .Span-total {
-  font-size: 1.2em;
-  font-weight: 700;
   color: var(--Primary-Strong-Cyan);
+  font-weight: 700;
 }
 
 .Btn-reset {
@@ -234,79 +238,82 @@ body {
   transform: scale(.97);
 }
 
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .attribution {
-    font-size: .5em;
-    text-align: center;
-  }
+  font-size: .6em;
+}
 
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
 
-    body {
-      max-width: 600vmin;
-      justify-content: space-evenly;
-    }
+  body {
+    font-size: 1.5em;
+    max-width: 700vmin;
+  }
 
-    .Container-calculator {
-      box-shadow: rgba(58, 10, 10, 0.2) 0 40px 40px -7px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
-      border-radius: 30px;
-      margin: 0;
-    }
+  .Container-calculator {
+    border-radius: 30px;
+    box-shadow: rgba(58, 10, 10, 0.2) 0 40px 40px -7px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
 
-    .Container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  .Title {
+    font-size: 2em;
+  }
 
-    .Section-form-user {
-      width: 40%;
-      display: flex;
-      margin-right: 2rem ;
-    }
-    .Section-form-show {
-      width: 48%;
-      border-radius: 15px;
-      margin: 0;
-    }
+  .Section-form-user {
+    display: flex;
+    margin-right: 2rem ;
+    width: 40%;
+  }
+  
+  .Section-form-show {
+    border-radius: 15px;
+    margin: 0;
+    width: 48%;
+  }
 
-    .Block-1, 
-    .Block-2, 
-    .Block-3 {
-      margin-bottom: 1rem;
-    }
+  .Block-1, 
+  .Block-2, 
+  .Block-3 {
+    margin-bottom: 1rem;
+  }
 
-    .Title {
-      font-size: 1em;
-    }
+  .Wrapper-tip {
+    grid-template-columns: repeat( 3, 2fr);
+    justify-items: stretch;
+  } 
 
-    .Wrapper-tip {
-      grid-template-columns: repeat( 3, 2fr);
-      justify-items: stretch;
-    } 
+  .Btn-tip,
+  .Input-custom {
+    margin: .3rem;
+    padding: .4rem;
+    width: 110px;
+  }
 
-    .Btn-tip,
-    .Input-custom {
-      width: 110px;
-      margin: .3rem;
-      padding: .4rem;
-    }
+  .Grid-1,
+  .Grid-4 {
+    margin-left: 0;
+  }
 
-    .Grid-1,
-    .Grid-4 {
-      margin-left: 0;
-    }
+  .Grid-3,
+  .Grid-6 {
+    margin-right: 0;
+  }
 
-    .Grid-3,
-    .Grid-6 {
-      margin-right: 0;
-    }
-
-    .Button-reset {
-      width: 400px;
-    }
+  .attribution {
+    font-size: 1em;
+  }
 
   }
