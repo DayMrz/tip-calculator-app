@@ -2,134 +2,132 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Tip calculator app</title>
-  <link rel="stylesheet" href="style.css">
+<title>Frontend Mentor | Tip calculator app</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="Conatiner-title">
-    <h1 class="Title">Spli <br> tter</h1>
-  </div>
-  
-    <main class="Container-calculator">
-  
-        <section class="Section-form-user">
-          <form id="Form" action="" autocomplete="off">
-            <div class="Block-1">
-              <h2 class=" Subtitle">Bill</h2>
-              <label class="DollarSign" for="billAmount">
-              </label>
-  
-              <input
-                class="Input-user"
-                id="$amount"
-                inputmode="decimal"
-                name="billAmount"
-                pattern="[0-9]+\.?[0-9]+"
-                placeholder="0.0"
-                required
-                type="number"
-              />
-  
-            </div>
-  
-            <div class="Block-2">
-              <h2 class="Subtitle-tip">Select Tip %</h2>
-              <div class="Wrapper-tip">
-  
-                <input class="Input-radio" type="radio" value="5" name="tip" id="tip-5" />
-                <label class="Bt Btn-tip Grid-1" for="tip-5">
-                  <span>5%</span>
-                </label>
-  
-                <input class="Input-radio" type="radio" value="10" name="tip" id="tip-10" />
-                <label class="Bt Btn-tip Grid-2" for="tip-10">
-                  <span>10%</span>
-                </label>
-  
-                <input class="Input-radio grid-3" type="radio" value="15" name="tip" id="tip-15" />
-                <label class="Bt Btn-tip Grid-3" for="tip-15">
-                  <span>15%</span>
-                </label>
-  
-                <input class="Input-radio" type="radio" value="25" name="tip" id="tip-25" />
-                <label class="Bt Btn-tip Grid-4" for="tip-25">
-                  <span>25%</span>
-                </label>
-  
-                <input class="Input-radio" type="radio" value="50" name="tip" id="tip-50" />
-                <label class="Bt Btn-tip Grid-5" for="tip-50">
-                  <span>50%</span>
-                </label>
-                <label>
-                  <input class="Bt Input-custom Grid-6" name="CustomTip" type="text" placeholder="Custom" data-tip-custom inputmode="decimal" />
-                </label>
-              </div>
-            </div>
-  
-            <div class="Block-3">
-              <h3 class="Subtitle">Number of People</h3>
-              <!-- <p class="Alert-visible Alert-hidden">Can't be zero!</p> -->
-              <p id="Alert" class="Alert-hidden">Can't be zero!</p>
-              <label class="UserIcon" for="amountPeople">
-                <input
-                  class="Input-user"
-                  type="number"
-                  id="Amount-people"
-                  inputmode="decimal"
-                  pattern="[0-9]+"
-                  name="amountPeople"
-                  min="1"
-                  required
-                  value="1"
-                />
-              </label>
-            </div>
-        </section>
-  
-        <section class="Section-form-show">
-          <div class="Display-show">
-            <div class="Row-show">
-              <div class="Content-description">
-                <h4 class="Subtitle-total">Tip Amount</h4>
-                <p class="P-description">/ person</p>
-              </div>
-              <div class="Show-total">
-                <h2 id="tipPerPerson" class="Span-total-tip">$ 0.00</h2>
-              </div>
-            </div>
-            <div class="Row-show">
-              <div class="Content-description">
-                <h4 class="Subtitle-total">Total</h4>
-                <p class="P-description">/ person</p>
-              </div>
-              <div class="Show-total">
-                <h2 id="totalPerPerson" class="Span-total">$ 0.00</h2>
-              </div>
-            </div>
-          </div>
-          <div class="container-btn">
-            <button type="reset" class="Btn-reset">Reset</button>
-          </div>
-          </form>
-        </section>
-  
-      </main>
-  
+<div class="Conatiner-title">
+  <h1 class="Title">Spli <br> tter</h1>
+</div>
 
+<main class="Container-calculator" role="main">
+  <section class="Section-form-user">
+    <form id="Form" action="" autocomplete="off">
+      <div class="Block-1">
+        <h2 class=" Subtitle">Bill</h2>
+        <label class="DollarSign" for="billAmount">
+        </label>
 
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Day M</a>.
+        <input
+          class="Input-user"
+          id="$amount"
+          inputmode="decimal"
+          name="billAmount"
+          pattern="[0-9]+\.?[0-9]+"
+          placeholder="0.0"
+          required
+          type="number"
+        />
+
+      </div>
+
+      <div class="Block-2">
+        <h2 class="Subtitle-tip">Select Tip %</h2>
+        <div class="Wrapper-tip">
+
+          <input class="Input-radio" type="radio" value="5" name="tip" id="tip-5" />
+          <label class="Bt Btn-tip Grid-1" for="tip-5">
+            <span>5%</span>
+          </label>
+
+          <input class="Input-radio" type="radio" value="10" name="tip" id="tip-10" />
+          <label class="Bt Btn-tip Grid-2" for="tip-10">
+            <span>10%</span>
+          </label>
+
+          <input class="Input-radio grid-3" type="radio" value="15" name="tip" id="tip-15" />
+          <label class="Bt Btn-tip Grid-3" for="tip-15">
+            <span>15%</span>
+          </label>
+
+          <input class="Input-radio" type="radio" value="25" name="tip" id="tip-25" />
+          <label class="Bt Btn-tip Grid-4" for="tip-25">
+            <span>25%</span>
+          </label>
+
+          <input class="Input-radio" type="radio" value="50" name="tip" id="tip-50" />
+          <label class="Bt Btn-tip Grid-5" for="tip-50">
+            <span>50%</span>
+          </label>
+          <label>
+            <input class="Bt Input-custom Grid-6" name="CustomTip" type="text" placeholder="Custom" data-tip-custom inputmode="decimal" />
+          </label>
+        </div>
+      </div>
+
+      <div class="Block-3">
+        <h3 class="Subtitle">Number of People</h3>
+        <!-- <p class="Alert-visible Alert-hidden">Can't be zero!</p> -->
+        <p id="Alert" class="Alert-hidden">Can't be zero!</p>
+        <label class="UserIcon" for="amountPeople">
+          <input
+            class="Input-user"
+            type="number"
+            id="Amount-people"
+            inputmode="decimal"
+            pattern="[0-9]+"
+            name="amountPeople"
+            min="1"
+            required
+            value="1"
+          />
+        </label>
+      </div>
+  </section>
+
+  <section class="Section-form-show">
+    <div class="Display-show">
+      <div class="Row-show">
+        <div class="Content-description">
+          <h4 class="Subtitle-total">Tip Amount</h4>
+          <p class="P-description">/ person</p>
+        </div>
+        <div class="Show-total">
+          <span id="tipPerPerson" class="Span-total-tip">$ 0.00</span>
+        </div>
+      </div>
+      <div class="Row-show">
+        <div class="Content-description">
+          <h4 class="Subtitle-total">Total</h4>
+          <p class="P-description">/ person</p>
+        </div>
+        <div class="Show-total">
+          <span id="totalPerPerson" class="Span-total">$ 0.00</span>
+        </div>
+      </div>
     </div>
-  </footer>
+    <div class="container-btn">
+      <button type="reset" class="Btn-reset">Reset</button>
+    </div>
+    </form>
+  </section>
+</main>
 
-  <script src="app.js"></script>
+
+
+<footer role="contentinfo">
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Day M</a>.
+  </div>
+</footer>
+
+<script src="app.js"></script>
 </body>
 
 </html>

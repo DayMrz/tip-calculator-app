@@ -203,6 +203,7 @@ body {
 .Span-total {
   color: var(--Primary-Strong-Cyan);
   font-weight: 700;
+  font-size: 1.5em;
 }
 
 .container-btn {
@@ -261,7 +262,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-
   body {
     max-width: 700vmin;
     height: 100vh;
@@ -323,5 +323,4 @@ footer {
   .attribution {
     font-size: 1em;
   }
-
-  }
+}
