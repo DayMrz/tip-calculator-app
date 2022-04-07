@@ -263,8 +263,9 @@ footer {
 
 @media (min-width: 768px) {
   body {
-    max-width: 700vmin;
+    font-size: 1.2em;
     height: 100vh;
+    max-width: 700vmin;
   }
 
   .Container-calculator {
@@ -277,7 +278,7 @@ footer {
   }
 
   .Title {
-    font-size: 2em;
+    font-size: 1.3em;
   }
 
   .Section-form-user {
