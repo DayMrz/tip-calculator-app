@@ -64,11 +64,10 @@ body {
 .Block-1, 
 .Block-2, 
 .Block-3 {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
-.Subtitle,
-.Subtitle-tip {
+.Subtitle {
   color: var(--Neutral-Dark-Grayish-Cyan);
   font-size: .8em;
   padding-bottom: 1em;
@@ -189,10 +188,9 @@ body {
   padding-bottom: 2em;
 }
 
-.Subtitle-total {
+.Subtitle_totals {
   color: var(--Neutral-White);
-  letter-spacing: 1.5px;
-  margin-bottom: 0;
+  font-size: .8em;
 }
 
 .P-description {
